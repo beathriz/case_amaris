@@ -5,20 +5,19 @@ Preparation:
   1. Docker: Download > docker --version > docker-compose --version
 
 - Airflow: 
-  1. Configurar o ambiente usando o docker-compose.yml
-  2. Baixar o arquivo base do Airflow: curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
-  3. Criar os diretórios:
-    mkdir dags logs plugins
-    echo -e "AIRFLOW_UID=$(id -u)" > .env
-  4. Subir o Airflow: docker-compose up -d
+   Configurar o ambiente usando o docker-compose.yml
+   Baixar o arquivo base do Airflow: curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
+   Criar os diretórios:
+      mkdir dags logs plugins
+      echo -e "AIRFLOW_UID=$(id -u)" > .env
+   Subir o Airflow: docker-compose up -d
 
 - PySpark 
-  1. Optei por criar um ambiente virtual para separar as config.
-    .\venv\Scripts\activate  
-  2. Instalar no ambiente: pip install pyspark
+     Optei por criar um ambiente virtual para separar as config  .\venv\Scripts\activate  
+     Instalar no ambiente: pip install pyspark
 
 - Python
-  1. python --version
+   python --version
 
 - VS Code with extensions: Docker /  Python /  Remote Containers /  GitHub
 
