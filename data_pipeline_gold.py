@@ -5,7 +5,6 @@ import os
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count
 
-# Configuração do DAG
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -24,7 +23,6 @@ dag = DAG(
     catchup=False,
 )
 
-# Função para criar a camada Gold
 def create_gold_layer():
     try:
         print("Iniciando criação da camada Gold...")
