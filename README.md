@@ -30,7 +30,7 @@ Settings
 
   4. Containerization: Docker 
 
-  5. Data Lake Architecture: Delta Lake
+  5. Data Lake Architecture: Volum in Docker
 
     a. Bronze Layer: 
     b. Silver Layer:
