@@ -31,6 +31,17 @@ Settings
     a. Bronze Layer: 
     b. Silver Layer:
     c. Gold Layer: 
+    
+ 6. Monitoring/Alerting: Dag de alerta para e-mail
+  Configuração do SMTP: O Airflow utiliza o protocolo SMTP para enviar e-mails.
+  Defini o servidor SMTP e as credenciais no arquivo airflow.cfg (conforme imagem)
 
+  Opções para rquitetura mais complexa: 
+  - Callbacks Customizados
+  - Serviços de monitoramento: Datadog, Prometheus, ou Grafana
+
+  7. Repository: https://github.com/beathriz/case_amaris
+
+  8. Cloud Services:
 
 
