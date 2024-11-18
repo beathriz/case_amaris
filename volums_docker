@@ -1,0 +1,52 @@
+-- Volumes created in docker for bronze, silver and gold layers
+
+C:\Users\User>docker exec -it amaris-airflow-webserver-1 bash
+airflow@bce3d133e38e:/opt/airflow$ ls -l /data
+total 0
+drwxrwxr-x 1 airflow root 4096 Nov 17 16:40 bronze
+drwxr-xr-x 1 airflow root 4096 Nov 18 02:58 gold
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 silver
+airflow@bce3d133e38e:/opt/airflow$ ls -ld /data/bronze
+drwxrwxr-x 1 airflow root 4096 Nov 17 16:40 /data/bronze
+airflow@bce3d133e38e:/opt/airflow$ ls -l /data/bronze
+total 160
+-rw-rw-r-- 1 airflow root 29264 Nov 16 06:11 breweries_20241116.json
+-rw-rw-r-- 1 airflow root 29264 Nov 16 05:18 breweries_20241116051805.json
+-rw-rw-r-- 1 airflow root 29264 Nov 17 09:58 breweries_20241117.json
+-rw-rw-r-- 1 airflow root 29264 Nov 17 16:13 breweries_20241117161345.json
+-rw-rw-r-- 1 airflow root 29264 Nov 17 16:40 breweries_20241117164039.json
+airflow@bce3d133e38e:/opt/airflow$ ls -l /data/silver
+total 0
+-rw-r--r-- 1 airflow root    0 Nov 17 16:43  _SUCCESS
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Arizona'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=California'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Colorado'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Delaware'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Idaho'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Illinois'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Indiana'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Iowa'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Laois'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Maryland'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Massachusetts'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Michigan'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Minnesota'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Mississippi'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Nevada'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=New York'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=North Carolina'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Ohio'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Oklahoma'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Oregon'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Pennsylvania'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=South Carolina'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Texas'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Vermont'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Virginia'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Washington'
+drwxr-xr-x 1 airflow root 4096 Nov 17 16:43 'state=Wisconsin'
+airflow@bce3d133e38e:/opt/airflow$ ls -l /data/gold
+total 4
+-rw-r--r-- 1 airflow root    0 Nov 18 02:58 _SUCCESS
+-rw-r--r-- 1 airflow root 1561 Nov 18 02:58 part-00000-3db1f39a-afa9-414d-a134-8c10db7a5b14-c000.snappy.parquet
+airflow@bce3d133e38e:/opt/airflow$
