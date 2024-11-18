@@ -25,7 +25,6 @@ dag = DAG(
     catchup=False,
 )
 
-# Função para buscar dados da API e salvar na Camada Bronze
 def api_to_bronze():
     api_url = "https://api.openbrewerydb.org/breweries"
     bronze_path = "/data/bronze"
@@ -47,13 +46,11 @@ def api_to_bronze():
     else:
         raise Exception(f"Erro ao buscar dados da API. Status code: {response.status_code}")
 
-# Função para transformar dados da Camada Bronze para a Camada Silver
 def transform_to_silver():
     bronze_path = "/data/bronze"
     silver_path = "/data/silver"
     os.makedirs(silver_path, exist_ok=True)
 
-    # Iniciar sessão Spark
     spark = SparkSession.builder \
         .appName("Transform to Silver") \
         .getOrCreate()
@@ -78,19 +75,16 @@ def transform_to_silver():
 
     print(f"Dados transformados e salvos na camada Silver em: {silver_path}")
 
-# Task para buscar e salvar os dados na Camada Bronze
 save_to_bronze = PythonOperator(
     task_id='api_to_bronze',
     python_callable=api_to_bronze,
     dag=dag,
 )
 
-# Task para transformar os dados da Camada Bronze para a Camada Silver
 save_to_silver = PythonOperator(
     task_id='transform_to_silver',
     python_callable=transform_to_silver,
     dag=dag,
 )
 
-# Definir a ordem de execução das tasks
 save_to_bronze >> save_to_silver
