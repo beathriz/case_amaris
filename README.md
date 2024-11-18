@@ -12,10 +12,6 @@ Preparation:
       echo -e "AIRFLOW_UID=$(id -u)" > .env
    Subir o Airflow: docker-compose up -d
 
-- PySpark 
-     Optei por criar um ambiente virtual para separar as config  .\venv\Scripts\activate  
-     Instalar no ambiente: pip install pyspark
-
 - Python
    python --version
 
