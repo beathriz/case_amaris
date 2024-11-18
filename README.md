@@ -32,16 +32,16 @@ Settings
     b. Silver Layer: Data is transformed into a columnar format like Parquet or Delta and partitioned by brewery location.
     c. Gold Layer: Processed data in an aggregated view with the number of breweries by type and location, in .parquet format
     
- 6. Monitoring/Alerting: Dag de alerta para e-mail
-  Configuração do SMTP: O Airflow utiliza o protocolo SMTP para enviar e-mails.
-  Defini o servidor SMTP e as credenciais no arquivo airflow.cfg (conforme imagem)
+  6. Monitoring/Alert: Email alert day
+  SMTP Configuration: Airflow uses the SMTP protocol to send emails.
+  Define the SMTP server and credentials in the airflow.cfg file (as shown in the image)
 
-  Opções para rquitetura mais complexa: 
-  - Callbacks Customizados
-  - Serviços de monitoramento: Datadog, Prometheus, ou Grafana
+  Options for more complex architecture: 
+  - Customized callbacks
+  - Monitoring services: Datadog, Prometheus, or Grafana
 
   7. Repository: https://github.com/beathriz/case_amaris
 
-  8. Cloud Services: MinIO - conectado no Docker
+  8. Cloud Services: MinIO - Connected in Docker
 
 
