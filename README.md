@@ -28,9 +28,9 @@ Settings
 
   5. Data Lake Architecture: Volum in Docker
 
-    a. Bronze Layer: 
-    b. Silver Layer:
-    c. Gold Layer: 
+    a. Bronze Layer: Used for storing data in its original format
+    b. Silver Layer: Data is transformed into a columnar format like Parquet or Delta and partitioned by brewery location.
+    c. Gold Layer: Processed data in an aggregated view with the number of breweries by type and location, in .parquet format
     
  6. Monitoring/Alerting: Dag de alerta para e-mail
   Configuração do SMTP: O Airflow utiliza o protocolo SMTP para enviar e-mails.
