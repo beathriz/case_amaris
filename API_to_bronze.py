@@ -5,7 +5,6 @@ import requests
 import os
 import json
 
-# Configuração do DAG
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -24,7 +23,6 @@ dag = DAG(
     catchup=False,
 )
 
-# Função para buscar dados da API e salvar no volume
 def api_to_bronze():
     api_url = "https://api.openbrewerydb.org/breweries"
     bronze_path = "/data/bronze"
@@ -46,7 +44,6 @@ def api_to_bronze():
     else:
         raise Exception(f"Erro ao buscar dados da API. Status code: {response.status_code}")
 
-# Task para buscar e salvar os dados
 save_to_volum = PythonOperator(
     task_id='api_to_bronze',
     python_callable=api_to_bronze,
