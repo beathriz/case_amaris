@@ -1,4 +1,4 @@
-# case_amaris
+# case_breweries
 Creation of Data Lake Architecture
 
 Preparation: 
