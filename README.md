@@ -42,6 +42,6 @@ Settings
 
   7. Repository: https://github.com/beathriz/case_amaris
 
-  8. Cloud Services: MinIO - Connected in Docker
+  8. Cloud Services: Google Drive (with rclone)
 
 
