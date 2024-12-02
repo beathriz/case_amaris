@@ -42,6 +42,7 @@ Settings
 
   7. Repository: https://github.com/beathriz/case_amaris
 
-  8. Cloud Services: Google Drive (with rclone)
+  8. Cloud Services: Google Drive with rclone.
+       Rclone - is a command-line software designed to manage, synchronize, and transfer files between local systems and cloud storage services.
 
 
